@@ -1,5 +1,5 @@
 class Item < ApplicationRecord
-
+    self.per_page = 10
     acts_as_taggable
 
     has_attached_file :picture, styles: { medium: "300x300>", thumb: "100x100>" }, default_url: "/images/:style/missing.png"

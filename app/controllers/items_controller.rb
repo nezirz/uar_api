@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
       search = tags.map{ |t| t.remove('+') if t.include?('+') }.compact
       remove = tags.map{ |t| t.remove('-') if t.include?('-') }.compact
 
-      @items = Item.tagged_with(search, :any => true,:wild => true).tagged_with(remove, :exclude => true,:wild => true).take(params[:id])
+      @items = Item.paginate(:page => params[:page]).tagged_with(search, :any => true,:wild => true).tagged_with(remove, :exclude => true,:wild => true)
     else
       @items = Item.all
     end

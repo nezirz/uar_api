@@ -28,6 +28,7 @@ gem 'jbuilder'
 gem 'rack-cors'
 gem 'paperclip'
 gem 'acts-as-taggable-on', '~> 6.0'
+gem 'will_paginate', '~> 3.1.0'
 # Use Rack CORS for handling Cross-Origin Resource Sharing (CORS), making cross-origin AJAX possible
 # gem 'rack-cors'
 
